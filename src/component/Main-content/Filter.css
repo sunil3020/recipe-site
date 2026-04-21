@@ -1,0 +1,14 @@
+#filter{
+    display: flex;
+    flex-direction: column;
+}
+#filter>h3{
+    color: black;
+    border-bottom: 1px solid gray;
+}
+#filter>select{
+    border: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}

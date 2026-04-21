@@ -1,0 +1,10 @@
+#filter-left{
+    width: 15%;
+}
+#filter-right{
+    width: 85%;
+}
+#Main_content{
+    display: flex;
+    
+}

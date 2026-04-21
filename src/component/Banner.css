@@ -1,0 +1,25 @@
+#banner{
+    width: 80%;
+    height: 500px;
+}
+#img{
+    display: flex;
+    justify-content: center;
+}
+#word{
+    position: absolute;
+    bottom: 190px;
+    left: 180px;
+}
+#word>p{
+    color: white;
+    font-size: 100px;
+}
+#word>button{
+    background-color: #F28C48;
+    color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+}

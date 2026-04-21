@@ -1,0 +1,52 @@
+import React, { useState } from "react"
+import logo from "../image/logo.png"
+import "./Header.css"
+
+
+const Header=({recipename})=>{
+
+    
+    const[values,setValues]=useState("");
+
+
+    const handelsearch=(e)=>{
+
+        
+        const input=e.target.value;
+        console.log(input);
+        setValues(input);
+        const filterdis=recipename.filter((p)=>{return(p.toLowerCase().includes(input.toLowerCase()))})
+        console.log(filterdis);
+    }
+
+    return(
+        <div id="header">
+            <div id="l-left">
+                <img src={logo} alt="" />
+                <p><span id="orage">Flavoe</span> Fusion</p>
+            </div>
+            <div id="l-right">
+                <nav>
+                    <a href="">Home</a>
+                    <a href="">Recipe</a>
+                    <a href="">Meal Plans</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                    <img src="" alt="" />
+                    <div id="search">
+                        <input type="text" name="" id="" value={values} onChange={handelsearch}/>
+
+                        <button>search</button>
+
+                        {values && recipename.filter(p=>(p.toLowerCase().includes(values.toLowerCase()))).map((p,index)=>(<li key={index}>{p}</li>))}
+
+                    </div>
+                </nav>
+            </div>
+           
+            
+        </div>
+        
+    )
+}
+export default Header;
