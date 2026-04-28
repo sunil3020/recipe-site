@@ -3,22 +3,24 @@ import logo from "../image/logo.png"
 import "./Header.css"
 
 
-const Header=({recipename})=>{
+const Header=({recipename,recipedata})=>{
 
     
     const[values,setValues]=useState("");
-
+   
 
     const handelsearch=(e)=>{
-
-        
         const input=e.target.value;
-        console.log(input);
         setValues(input);
         const filterdis=recipename.filter((p)=>{return(p.toLowerCase().includes(input.toLowerCase()))})
-        console.log(filterdis);
+       
     }
 
+    const handelclick=(p)=>{
+        const select=recipedata.filter((i)=>(i.name.includes(p)))
+        console.log(p);
+        console.log(select);
+    }
     return(
         <div id="header">
             <div id="l-left">
@@ -32,13 +34,13 @@ const Header=({recipename})=>{
                     <a href="">Meal Plans</a>
                     <a href="">Blog</a>
                     <a href="">Contact</a>
-                    <img src="" alt="" />
+                   
                     <div id="search">
                         <input type="text" name="" id="" value={values} onChange={handelsearch}/>
 
                         <button>search</button>
 
-                        {values && recipename.filter(p=>(p.toLowerCase().includes(values.toLowerCase()))).map((p,index)=>(<li key={index}>{p}</li>))}
+                        {values && recipename.filter(p=>(p.toLowerCase().includes(values.toLowerCase()))).map((p,index)=>(<li key={index} onClick={()=>handelclick(p)}>{p}</li>))}
 
                     </div>
                 </nav>

@@ -2,6 +2,7 @@
 import "./RecipeCard.css"
 import Rating from "./Rating";
 import { useState } from "react";
+
 const RecipeCard=({detail})=>{
 
 const [value,setValue]=useState(null)

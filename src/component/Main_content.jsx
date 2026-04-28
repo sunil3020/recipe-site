@@ -3,7 +3,7 @@ import Filter from "./Main-content/Filter";
 import RecipeCard from "./Main-content/RecipeCard";
 import "./Main_content.css"
 
-const Main_content=({setrecipename})=>{
+const Main_content=({setrecipename,setrecipedata})=>{
     const [data,setData]=useState(null);
     const [filter,setFilter]=useState( {cuisine:"",
                                     difficulty:"",
@@ -17,6 +17,7 @@ const Main_content=({setrecipename})=>{
         let res= await fetch("https://dummyjson.com/recipes");
         let  datas= await res.json();
         setData(datas);
+        setrecipedata(datas.recipes);
         }
     fetchrecipes();
 },[]);
@@ -40,7 +41,7 @@ const filterdata=data?.recipes?.filter((p)=>{
             </div>   
             <div id="filter-right">
 
-                <RecipeCard detail={filterdata}/>
+                <RecipeCard detail={filterdata} />
             </div>
         </div>
     );

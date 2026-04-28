@@ -5,19 +5,22 @@ import './App.css'
 import Header from './component/header'
 import Banner from './component/banner'
 import Main_content from './component/Main_content'
+import { createBrowserRouter } from 'react-router-dom'
 
 
 function App() {
   
   const [recipename,setRecipename]=useState(null);
- 
-
+  const [recipedata,setRecipedata]=useState([]);
+  
+  
+  
   return (
     
    <>
-    <Header recipename={recipename}/>
+    <Header recipename={recipename} recipedata={recipedata} />
     <Banner />
-    <Main_content setrecipename={setRecipename}/>
+    <Main_content setrecipename={setRecipename} setrecipedata={setRecipedata}  />
       
    </>
   )
