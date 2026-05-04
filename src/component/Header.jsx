@@ -48,7 +48,7 @@ const Header=({recipename,recipedata,favorite})=>{
                     <div id="search">
                         <input type="text" name="" id="" value={values} onChange={handelsearch}/>
 
-                        <button>search</button><span id="count">{favorite?.length()}</span>
+                        <button>search</button><span id="count">{favorite?.length}</span>
 
                         {values && recipename.filter(p=>(p.toLowerCase().includes(values.toLowerCase()))).map((p,index)=>(<li key={index} onClick={()=>handelclick(p)}>{p}</li>))}
 
