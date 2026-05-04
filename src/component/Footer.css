@@ -1,0 +1,156 @@
+/* Flavor Fusion Footer Styles */
+
+.footer-container {
+  background-color: #333333; /* Deep Charcoal from brand palette */
+  color: #ffffff;
+  padding: 48px 24px 32px 24px;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+}
+
+/* Responsive Grid for Desktop */
+@media (min-width: 768px) {
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+}
+
+/* Brand Section */
+.footer-logo-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brand-highlight {
+  color: #F28C48; /* Primary Brand Orange */
+}
+
+.footer-description {
+  color: #a0a0a0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  max-width: 250px;
+}
+
+/* Navigation Links */
+.footer-heading {
+  color: #F28C48;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-input {
+  background-color: #444444;
+  border: 1px solid #555555;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: white;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.newsletter-input:focus {
+  border-color: #F28C48;
+}
+
+.newsletter-button {
+  background-color: #F28C48;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #E67E22; /* Darker orange for hover */
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #444444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+  }
+}
+
+.copyright-text {
+  color: #777777;
+  font-size: 0.75rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.social-links a:hover {
+  color: #F28C48;
+}

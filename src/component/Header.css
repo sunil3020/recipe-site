@@ -69,3 +69,17 @@
     border: 0.5px solid black;
     padding: 1px;
 }
+#like{
+    height: 40px;
+    border-radius: 160px;
+   
+}
+#count {
+    position: relative;
+    top:5px;
+    right: 280px;
+    background-color:  red;
+    height: 30px;
+    width: 50px;
+    border-radius: 0px;
+}

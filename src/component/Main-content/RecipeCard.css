@@ -15,20 +15,3 @@ width: 200px;
 .eachcard>a>button{
     color: orange;
 }
-.detailcard{
-    position: fixed;
-    top: 0px;
-    right: 78px;
-    background-color: rgba(255, 255, 255);
-
-}
-.detailcard{
-    width: 1440px;
-    height: 900px;
-    display: flex;
-    align-content: center;
-    justify-content: center     ;
-}            
-#deteil-left>img{
-    height: 200px;
-}

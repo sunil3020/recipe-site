@@ -1,26 +1,47 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './component/header'
-import Banner from './component/banner'
+import Detail from './component/Main-content/Detail'
+
 import Main_content from './component/Main_content'
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './component/Home' 
+import Favorite from './component/Favorite'
 
 
 function App() {
-  
-  const [recipename,setRecipename]=useState(null);
-  const [recipedata,setRecipedata]=useState([]);
-  
-  
+  const [fav,setFav]=useState(()=>{
+    const store=localStorage.getItem("fav");
+    return store? JSON.parse(store) : [];
+  });
+
+  useEffect(()=>{
+    localStorage.setItem("fav",JSON.stringify(fav));
+  },[fav])
+
+
+  const router=createBrowserRouter([{
+    path:"/",
+    element:<Home setfav={setFav}/>
+  },
+  {
+    path:"/detail/:id",
+    element:<Detail/>
+  },{
+     path:"/favorite",
+    element:<Favorite fav={fav} setfav={setFav}/>
+  }
+],{
+    basename:"/recipe-site"
+  })
+
   
   return (
     
    <>
-    <Header recipename={recipename} recipedata={recipedata} />
-    <Banner />
-    <Main_content setrecipename={setRecipename} setrecipedata={setRecipedata}  />
+
+    <RouterProvider router={router}/>
       
    </>
   )

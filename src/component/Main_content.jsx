@@ -3,7 +3,7 @@ import Filter from "./Main-content/Filter";
 import RecipeCard from "./Main-content/RecipeCard";
 import "./Main_content.css"
 
-const Main_content=({setrecipename,setrecipedata})=>{
+const Main_content=({setrecipename,setrecipedata,setfavorite,favorite})=>{
     const [data,setData]=useState(null);
     const [filter,setFilter]=useState( {cuisine:"",
                                     difficulty:"",
@@ -41,7 +41,7 @@ const filterdata=data?.recipes?.filter((p)=>{
             </div>   
             <div id="filter-right">
 
-                <RecipeCard detail={filterdata} />
+                <RecipeCard detail={filterdata} setfavorite={setfavorite} favorite={favorite} />
             </div>
         </div>
     );
