@@ -11,7 +11,17 @@ width: 200px;
 .eachcard{
     margin-left: 35px;
     margin-bottom: 10px;
+    line-height: 2;
 }
-.eachcard>a>button{
-    color: orange;
+
+.eachcard>div{
+    display: flex;
+    justify-content: space-between;
+}
+.eachcard>div>button{
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
 }

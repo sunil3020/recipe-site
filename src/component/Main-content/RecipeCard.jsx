@@ -35,8 +35,10 @@ const favorites=(p)=>{
                             <img src={p.image} alt="" className="R-image"/>
                             <p>{p.name}</p>
                             <Rating rcount={p.reviewCount} rating={p.rating}/>
+                            <div>
                             <button onClick={()=>navigate(`/detail/${p.id}`)}>Detail</button>
                             <button onClick={()=>favorites(p)}>Add to Favorite</button>
+                            </div>
                         
                     </div>
                 ))}

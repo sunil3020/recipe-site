@@ -1,0 +1,67 @@
+.fav-card{
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fav-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.fav-card > img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.fav-card > p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    width: 250px;
+    text-align: center;
+}
+
+.fav-card > #btn{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fav-card > #btn > button{
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.fav-card > #btn > button:first-child{
+    background-color: #dc3545;
+    color: white;
+}
+
+.fav-card > #btn > button:first-child:hover{
+    background-color: #c82333;
+}
+
+.fav-card > #btn > button:last-child{
+    background-color: #F28C48;
+    color: white;
+}
+
+.fav-card > #btn > button:last-child:hover{
+    background-color: #d97706;
+}

@@ -4,6 +4,7 @@ import "./Header.css"
 import { useNavigate } from "react-router-dom"
 import like from "../image/Like.png"
 import Favorite from "./Favorite"
+
 const Header=({recipename,recipedata,favorite})=>{
 
     const navigate=useNavigate();
@@ -31,6 +32,7 @@ const Header=({recipename,recipedata,favorite})=>{
 
     
     return(
+        
         <div id="header">
             <div id="l-left">
                 <img src={logo} alt="" />
@@ -43,13 +45,16 @@ const Header=({recipename,recipedata,favorite})=>{
                     <a href="">Meal Plans</a>
                     <a href="">Blog</a>
                     <a href="">Contact</a>
-                    <img src={like} alt="" id="like" onClick={()=> navigate("/favorite")}/>
                     
+                    <div className="like-container" onClick={() => navigate("/favorite")}>
+                        <img src={like} alt="" id="like" />
+                        {favorite?.length > 0 && <span id="count">{favorite.length}</span>}
+                    </div>
+
                     <div id="search">
                         <input type="text" name="" id="" value={values} onChange={handelsearch}/>
-
-                        <button>search</button><span id="count">{favorite?.length}</span>
-
+                        
+                        <button>search</button>
                         {values && recipename.filter(p=>(p.toLowerCase().includes(values.toLowerCase()))).map((p,index)=>(<li key={index} onClick={()=>handelclick(p)}>{p}</li>))}
 
                     </div>
@@ -59,6 +64,8 @@ const Header=({recipename,recipedata,favorite})=>{
            
             
         </div>
+        
+        
         
     )
 }

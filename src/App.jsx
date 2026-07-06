@@ -27,7 +27,7 @@ function App() {
   },
   {
     path:"/detail/:id",
-    element:<Detail/>
+    element:<Detail fav={fav} setfav={setFav}/>
   },{
      path:"/favorite",
     element:<Favorite fav={fav} setfav={setFav}/>

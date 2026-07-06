@@ -1,4 +1,12 @@
 #banner{
+    width: 100%;
+    height: 500px;
+}
+#full-banner{
+    display: flex;
+    justify-content: center;
+}
+#full-banner>div{
     width: 80%;
     height: 500px;
 }
@@ -7,8 +15,8 @@
     justify-content: center;
 }
 #word{
-    position: absolute;
-    bottom: 190px;
+    position: relative;
+    bottom: 450px;
     left: 180px;
 }
 #word>p{

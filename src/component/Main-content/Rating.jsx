@@ -14,7 +14,7 @@ const Rating=({rcount,rating})=>{
 
     return(
         <div>
-            {star}<span>{rating.toFixed(1)} / 5</span> <p>{rcount} reviews</p>
+            {star}<p>{rating.toFixed(1)} / 5</p> <br /><p>{rcount} reviews</p>
         </div>
     )
 }

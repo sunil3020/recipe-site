@@ -1,156 +1,160 @@
-/* Flavor Fusion Footer Styles */
-
-.footer-container {
-  background-color: #333333; /* Deep Charcoal from brand palette */
+/* ===== Footer Base ===== */
+.footer {
+  background-color: #333333;
   color: #ffffff;
-  padding: 48px 24px 32px 24px;
-  font-family: 'Inter', -apple-system, sans-serif;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
 }
 
-.footer-content {
+/* ===== Container ===== */
+.footer-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
-/* Responsive Grid for Desktop */
-@media (min-width: 768px) {
-  .footer-content {
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Brand Section */
-.footer-logo-area {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
 }
 
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.brand-highlight {
-  color: #F28C48; /* Primary Brand Orange */
-}
-
-.footer-description {
-  color: #a0a0a0;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  max-width: 250px;
-}
-
-/* Navigation Links */
-.footer-heading {
-  color: #F28C48;
-  font-size: 0.75rem;
-  font-weight: 700;
+/* ===== Sections ===== */
+.footer-section h4 {
+  color: #f28c48;
+  margin-bottom: 15px;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 16px;
 }
 
-.footer-links {
+.footer-section ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer-links li {
+.footer-section ul li {
   margin-bottom: 10px;
 }
 
-.footer-links a {
-  color: #d1d1d1;
+/* ===== Links ===== */
+.footer-section a {
+  color: #cccccc;
   text-decoration: none;
-  font-size: 0.875rem;
-  transition: color 0.3s ease;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-.footer-links a:hover {
+.footer-section a:hover {
   color: #ffffff;
 }
 
-/* Newsletter Form */
-.newsletter-form {
+/* ===== Brand ===== */
+.brand {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.newsletter-input {
-  background-color: #444444;
-  border: 1px solid #555555;
-  border-radius: 6px;
-  padding: 10px 14px;
-  color: white;
-  font-size: 0.875rem;
+.brand-icon {
+  background-color: #f28c48;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.brand-name span {
+  color: #f28c48;
+}
+
+/* ===== Text ===== */
+.footer-text {
+  font-size: 14px;
+  color: #bbbbbb;
+  line-height: 1.6;
+}
+
+/* ===== Newsletter ===== */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
   outline: none;
 }
 
-.newsletter-input:focus {
-  border-color: #F28C48;
+.newsletter input::placeholder {
+  color: #aaa;
 }
 
-.newsletter-button {
-  background-color: #F28C48;
-  color: white;
-  border: none;
-  border-radius: 6px;
+.newsletter input:focus {
+  border: 2px solid #f28c48;
+}
+
+.newsletter button {
   padding: 10px;
-  font-weight: 700;
+  background-color: #f28c48;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.newsletter-button:hover {
-  background-color: #E67E22; /* Darker orange for hover */
+.newsletter button:hover {
+  background-color: #e67e22;
 }
 
-/* Bottom Bar */
+/* ===== Bottom Bar ===== */
 .footer-bottom {
-  max-width: 1200px;
-  margin: 48px auto 0;
-  padding-top: 24px;
-  border-top: 1px solid #444444;
+  border-top: 1px solid #555;
+  margin-top: 40px;
+  padding-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
-  .footer-bottom {
-    flex-direction: row;
-  }
+.footer-bottom p {
+  font-size: 13px;
+  color: #aaaaaa;
 }
 
-.copyright-text {
-  color: #777777;
-  font-size: 0.75rem;
-}
-
-.social-links {
+/* ===== Social Links ===== */
+.socials {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
-.social-links a {
-  color: #a0a0a0;
+.socials a {
+  font-size: 13px;
+  color: #aaaaaa;
   text-decoration: none;
-  font-size: 0.75rem;
-  text-transform: capitalize;
+  transition: 0.3s;
 }
 
-.social-links a:hover {
-  color: #F28C48;
-}
+.socials a:hover {
+  color: #f28c48;
+} 

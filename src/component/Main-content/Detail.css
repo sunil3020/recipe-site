@@ -1,0 +1,126 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#blur{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#blur>img{
+    height: 300px;
+    width: 80%;
+    border-radius: 5px;
+    filter: blur(30px);
+
+}
+
+#original{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    bottom: 280px;
+}
+#original>div{
+    display: flex;
+    justify-content: space-evenly;
+    
+    width: 80%;
+    
+}
+#original>div>img{
+    height: 250px;
+    
+}
+#original>div>h1{
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F28C48;
+}
+#detail-left>h2{
+    position: relative;
+    bottom: 200px;
+
+}
+#image-container{
+    margin-top: 40px;
+   margin-bottom: -190px;
+}
+#detail-left{
+    margin-left: 100px;
+    width: 40%;
+}
+#overview{
+    display: flex;
+   
+}
+#overview>div{
+    margin-right: 30px;
+    
+}
+
+#detail-left>h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#detail-left>ul{
+    margin-left: 20px;
+}
+#detail-left>ul>li::marker{
+    color:#F28C48 ;
+    
+}
+#detail-left>ol{
+    margin-left: 20px;
+}
+#detailcard>div{
+display: flex;
+}
+#flex-apply{
+    display: flex;
+}
+#detail-btn{
+    display: flex;
+    justify-content: center;
+     margin-top: 40px;   
+    margin-bottom: 40px;
+}
+#detail-btn>div{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#detail-btn>div>button{
+    border: none;
+    border-radius: 10px;
+    background-color: #F28C48;
+    color: white;
+    padding: 10px
+}
+#detail-right>h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#detail-right>ul{
+   
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+
+}
+#detail-right>ul>li{
+    list-style-type: none;
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    width: 100px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+
+
